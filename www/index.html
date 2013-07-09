@@ -39,7 +39,7 @@
             app.initialize();
  
             function capturePhoto(){
-                navigator.camera.getPicture( uploadPhoto, null, {sourceType:Camera.PictureSourceType.CAMERA,destinationType:Camera.DestinationType.DATA_URL,quality:90,allowEdit:True});
+                navigator.camera.getPicture( uploadPhoto, null, {sourceType:Camera.PictureSourceType.CAMERA,destinationType:Camera.DestinationType.DATA_URL,quality:50});
             }
 
             function uploadPhoto(data){
