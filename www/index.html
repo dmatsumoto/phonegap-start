@@ -39,13 +39,13 @@
             app.initialize();
  
             function capturePhoto(){
-                navigator.camera.getPicture( uploadPhoto, null, {sourceType:Camera.PictureSourceType.CAMERA,destinationType:Camera.DestinationType.FILE_URI,quality:90,allowEdit:True});
+                navigator.camera.getPicture( uploadPhoto, null, {sourceType:Camera.PictureSourceType.CAMERA,destinationType:Camera.DestinationType.DATA_URL,quality:90,allowEdit:True});
             }
 
             function uploadPhoto(data){
                 // this is where you would send the image file to server
                 //output image to screen
-            	//cameraPic.src = "data:image/jpeg;base64," + data;
+            	cameraPic.src = "data:image/jpeg;base64," + data;
                 // Successful upload to the server
             	navigator.notification.alert(
             		'Your Photo has been uploaded',  // message
